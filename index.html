@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+<div class = 'wrapper'>
+    <h1>Crystals Collector Game!</h1>
+    <h2 >Game Rules </h2>
+    <p>You are given a random number at the start of the game.  There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.  You win the game by matching your total score to the ramdom number, you lose the game if your total score goes above the random number.</p>
+    <p>The value of each crystal is hidden from you until you click on it.  Each time when the game starts, the game will change the values of each crystal.</p>
+    <br>
+    <div class="score-space">
+        <!-- <h3 class="col-sm-3"></h3> -->
+        <h3 class="col-sm-3">Target Score: <span id='targetScore'>0</span></h3>
+        <h3 class="col-sm-2 ">Your Score: <span id='yourScore'>0</span></h3>
+    </div>
+    <br> 
+    <div class="buttons">
+        <button class="diamond" id="red" value="5">Red</button>
+        <button class="diamond" id="blue" value="10">Blue</button>
+        <button class="diamond" id="yellow" value="15">Yellow</button>
+        <button class="diamond" id="green" value="20">Green</button>
+    </div>
+</div>
+
+
+
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>
