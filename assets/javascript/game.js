@@ -13,10 +13,9 @@ $( "#targetScore").text(rand120);
 $(".diamond").each(function() { 
     this.value = rand120();
     return this.value;
-    console.log(this.value);
 });
-let score = 0;
 
+let score = 0;
 $(".diamond").click(function(){
     score += randTwelve();
     $("#yourScore").text(score);
