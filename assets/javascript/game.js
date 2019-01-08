@@ -36,7 +36,10 @@ $("#green").click(function(){
     $("#yourScore").text(score);   
 });
 
-if($('#yourScore') > $('#targetScore')){
+console.log($( "#targetScore").text());
+console.log($( "#yourScore").text());
+
+if( score++ > $( "#targetScore").text()){
     console.log('test pass');
 }
 
