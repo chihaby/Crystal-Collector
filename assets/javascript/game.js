@@ -1,9 +1,14 @@
-
+function randTwelve() {
+    return Math.floor(Math.random() * 12) + 1;
+}
 function rand120() {
     return Math.floor(Math.random() * 120) + 19;
 }
+
 let targetScore = 0;
 let score = 0;
+win = 0;
+loss = 0;
 
 function resetGame() {
     targetScore = rand120();
@@ -14,23 +19,19 @@ function resetGame() {
     $( "#targetScore").text(targetScore);
 }
 
-function randTwelve() {
-    return Math.floor(Math.random() * 12) + 1;
-}
-
 function gameOver() {
     if (score === targetScore) {
-        console.log("you win!");
+        win++;
+        $('#yourWins').text(win);
         resetGame();
-    } else if (targetScore < score) {
-        console.log("you lose...");
+    }
+    
+    if (targetScore < score) {
+        loss++;
+        $('#yourLosses').text(loss);
         resetGame();
     }
 }
-
-
-
-
 
 $("#red").click(function(){
     score += parseInt(this.value);
@@ -50,18 +51,10 @@ $("#yellow").click(function(){
     gameOver();   
 });
 
-
 $("#green").click(function(){
     score += parseInt(this.value);
     $("#yourScore").text(score); 
     gameOver();  
 });
-
-console.log($( "#targetScore").text());
-console.log($( "#yourScore").text());
-
-if( score++ > $( "#targetScore").text()){
-    console.log('test pass');
-}
 
 resetGame();

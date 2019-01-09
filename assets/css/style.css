@@ -1,6 +1,7 @@
 .wrapper {
     margin-left: 50px;
     margin-right: 50px;
+    background-color: silver;
 }
 
 .buttons {     
@@ -11,4 +12,15 @@ h1, h2, h3 {
     text-align: center;
 }
 
+p {
+    color: rgb(129, 39, 39);
+}
 
+.score-spaceB {
+    text-align: center;
+    text-emphasis-color: wheat;
+}
+
+button {
+    background-color: wheat;
+}
